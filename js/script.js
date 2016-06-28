@@ -17,6 +17,15 @@ for (var i = 0; i < 9 ; i++) {
       }
     })
   }
+
+// set up click listener for Reset Button
+document.getElementById('reset').addEventListener('click', function (e) {
+  //reset board to blank values
+  for (var i=0; i < 9; i++) {
+    board[i] = ''
+  }
+  drawBoard()
+})
       // loop through squares again and check with node was clicked
 //       for (var j=0; j < 9; j++) {
 //         if (squares[j] === e.target && board[j] === '') {
@@ -73,3 +82,5 @@ function checkWin () {
     }
   }
 }
+
+
